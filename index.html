@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Abdo Gaming - العب أفضل ألعاب HTML5 مجاناً</title>
+    <meta name="description" content="العب أفضل ألعاب HTML5 مجاناً بدون تحميل أو تسجيل - أكشن، سباق، ألغاز، مغامرة، رعب. يعمل على الموبايل والكمبيوتر.">
+    <meta name="keywords" content="العاب اون لاين، العاب HTML5، العاب موبايل، العاب مجانية، العاب بدون تحميل، العاب عربي">
+    <meta name="author" content="Abdo Gaming">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://7aarx2.edgeone.app/">
+
+    <!-- Open Graph - واتساب وتيليجرام وفيسبوك -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://7aarx2.edgeone.app/">
+    <meta property="og:title" content="Abdo Gaming - العب مجاناً بدون تحميل">
+    <meta property="og:description" content="أفضل ألعاب HTML5 مجاناً على الموبايل والكمبيوتر - أكشن، سباق، ألغاز ومزيد!">
+    <meta property="og:image" content="https://i.ibb.co/4wcfZb1X/image.png">
+    <meta property="og:locale" content="ar_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abdo Gaming - العب مجاناً">
+    <meta name="twitter:description" content="أفضل ألعاب HTML5 مجاناً بدون تحميل">
+    <meta name="twitter:image" content="https://i.ibb.co/4wcfZb1X/image.png">
+
+    <!-- Schema.org - بيانات منظمة لـ Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Abdo Gaming",
+      "url": "https://7aarx2.edgeone.app/",
+      "description": "منصة ألعاب HTML5 مجانية تعمل على الموبايل والكمبيوتر",
+      "inLanguage": "ar",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://7aarx2.edgeone.app/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <!-- Schema.org - معلومات المالك والمنصات -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "عبدالباسط بوخالد",
+      "alternateName": ["abdo.dve", "Abdo"],
+      "jobTitle": "مطور تطبيقات ومؤسس Abdo Store و Abdo Gaming",
+      "email": "sereneteam.help@gmail.com",
+      "memberOf": {"@type": "Organization", "name": "Serene Team"},
+      "owns": [
+        {"@type": "WebSite", "name": "Abdo Gaming", "url": "https://abdogaming.edgeone.app/"},
+        {"@type": "WebSite", "name": "Abdo Store", "url": "https://abdostore.edgeone.app/"}
+      ]
+    }
+    <\/script>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#050505">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('SW registered'))
+                .catch(err => console.log('SW error:', err));
+            });
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #050505; color: white; -webkit-tap-highlight-color: transparent; margin: 0; overflow: hidden; }
+
+        /* Header */
+        .site-header { height: 56px; background: #000; border-bottom: 1px solid rgba(0,255,136,0.2); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; position: sticky; top: 0; z-index: 10; }
+
+        /* Search */
+        .search-wrap { padding: 10px 14px 6px; }
+        .search-input { width: 100%; background: #111; border: 1px solid #2a2a2a; border-radius: 12px; padding: 10px 14px; color: white; outline: none; font-family: 'Tajawal', sans-serif; font-size: 14px; transition: 0.3s; }
+        .search-input:focus { border-color: #00ff88; box-shadow: 0 0 8px rgba(0,255,136,0.15); }
+
+        /* Category tabs */
+        .cat-scroll { display: flex; gap: 8px; padding: 6px 14px 10px; overflow-x: auto; scrollbar-width: none; }
+        .cat-scroll::-webkit-scrollbar { display: none; }
+        .cat-btn { flex-shrink: 0; padding: 5px 14px; border-radius: 20px; border: 1px solid #333; background: #111; color: #888; font-size: 12px; font-family: 'Tajawal', sans-serif; font-weight: 700; cursor: pointer; transition: 0.2s; white-space: nowrap; }
+        .cat-btn:active { transform: scale(0.95); }
+        .cat-btn.active { background: #00ff88; border-color: #00ff88; color: #000; }
+
+        /* Grid */
+        .game-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 4px 10px 80px; overflow-y: auto; }
+        .game-grid-wrap { height: calc(100vh - 148px); overflow-y: auto; }
+
+        /* Card */
+        .game-card { background: #111; border-radius: 12px; overflow: hidden; border: 1px solid #1e1e1e; cursor: pointer; transition: transform 0.15s, border-color 0.15s; display: flex; flex-direction: column; }
+        .game-card:active { transform: scale(0.93); border-color: #00ff88; }
+        .game-thumbnail { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #1a1a1a; display: block; }
+        .game-info { padding: 5px 4px 7px; text-align: center; font-weight: 700; font-size: 10px; color: #00ff88; line-height: 1.3; min-height: 32px; display: flex; align-items: center; justify-content: center; }
+
+        /* Category badge on card */
+        .cat-badge { font-size: 9px; color: #555; margin-top: 1px; }
+
+        /* Skeleton */
+        .skeleton { background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 12px; aspect-ratio: 1; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        /* Empty state */
+        .empty-state { grid-column: 1/-1; text-align: center; padding: 40px 20px; color: #444; }
+
+        /* Game overlay */
+        #gameOverlay { display: none; position: fixed; inset: 0; background: #000; z-index: 2000; }
+        .game-header { height: 52px; background: #111; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; border-bottom: 1px solid #222; }
+        #gameFrame { width: 100%; height: calc(100vh - 52px); border: none; }
+        .game-btn { font-size: 10px; padding: 5px 10px; border-radius: 20px; font-family: 'Tajawal', sans-serif; font-weight: 700; cursor: pointer; border: 1px solid; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1 style="font-size:18px; font-weight:900; font-style:italic; letter-spacing:-0.5px;">
+            ABDO <span style="color:#00ff88;">GAMING</span>
+        </h1>
+        <span id="gameCount" style="font-size:11px; color:#555;"></span>
+    </header>
+
+    <!-- Search -->
+    <div class="search-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 ابحث عن لعبة..." oninput="onSearch()">
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="cat-scroll" id="catTabs">
+        <button class="cat-btn active" onclick="filterByCategory('الكل')">🎮 الكل</button>
+    </div>
+
+    <!-- Game Grid -->
+    <div class="game-grid-wrap">
+        <div class="game-grid" id="gameGrid">
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+        </div>
+    <!-- Footer -->
+    <footer style="text-align:center; padding: 20px 16px 40px; border-top: 1px solid #1a1a1a; margin-top: 10px;">
+        <p style="font-size:12px; color:#444; margin-bottom:6px;">
+            للتواصل والدعم: 
+            <a href="mailto:sereneteam.help@gmail.com" style="color:#00ff88; text-decoration:none;">sereneteam.help@gmail.com</a>
+        </p>
+        <p style="font-size:11px; color:#333;">
+            © 2026 جميع الحقوق محفوظة لـ Abdulbasit Boukhaled
+        </p>
+    </footer>
+    </div>
+
+    <!-- Game Overlay -->
+    <div id="gameOverlay">
+        <div class="game-header">
+            <button onclick="closeGame()" style="color:white; font-size:20px; font-weight:bold; background:none; border:none; cursor:pointer;">✕</button>
+            <span id="currentGameTitle" style="color:#00ff88; font-weight:bold; font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:180px;"></span>
+            <div style="display:flex; gap:6px;">
+                <button class="game-btn" onclick="shareGame()" style="color:#f59e0b; border-color:#f59e0b; background:rgba(245,158,11,0.1);">📤 مشاركة</button>
+                <button class="game-btn" onclick="rotateScreen()" style="color:#60a5fa; border-color:#60a5fa; background:rgba(59,130,246,0.1);">🔄 تدوير</button>
+                <button class="game-btn" onclick="toggleFullScreen()" style="color:#00ff88; border-color:#00ff88; background:rgba(0,255,136,0.1);">⛶ ملء</button>
+            </div>
+        </div>
+        <iframe id="gameFrame" src="" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        let games = [];
+        let activeCategory = 'الكل';
+        let currentGameId = null;
+
+        // تعريف أيقونات التصنيفات
+        const catIcons = {
+            'رياضة':'⚽',
+            'أكشن': '⚔️',
+            'سباق': '🏎️',
+            'ألغاز': '🧩',
+            'مغامرة': '🗺️',
+            'استراتيجية': '♟️',
+            'محاكاة': '🏗️',
+            'رعب': '👻',
+            'الكل': '🎮'
+        };
+
+        async function loadGames() {
+            try {
+                const res = await fetch('games.json');
+                if (!res.ok) throw new Error('فشل الجلب');
+                games = await res.json();
+                buildCategoryTabs();
+                renderGames(games);
+                document.getElementById('gameCount').textContent = `${games.length} لعبة`;
+            } catch (err) {
+                document.getElementById('gameGrid').innerHTML =
+                    '<div class="empty-state">⚠️ فشل تحميل الألعاب<br><small>تأكد من وجود games.json</small></div>';
+            }
+        }
+
+        function buildCategoryTabs() {
+            const categories = ['الكل', ...new Set(games.map(g => g.category).filter(Boolean))];
+            const tabsEl = document.getElementById('catTabs');
+            tabsEl.innerHTML = '';
+            categories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'cat-btn' + (cat === 'الكل' ? ' active' : '');
+                const icon = catIcons[cat] || '🎯';
+                const count = cat === 'الكل' ? games.length : games.filter(g => g.category === cat).length;
+                btn.textContent = `${icon} ${cat} (${count})`;
+                btn.addEventListener('click', () => filterByCategory(cat));
+                tabsEl.appendChild(btn);
+            });
+        }
+
+        function filterByCategory(cat) {
+            activeCategory = cat;
+            // تحديث الأزرار
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            // مسح البحث
+            document.getElementById('searchInput').value = '';
+            // فلترة
+            const filtered = cat === 'الكل' ? games : games.filter(g => g.category === cat);
+            renderGames(filtered);
+        }
+
+        function onSearch() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            // إعادة تعيين التصنيف للكل عند البحث
+            if (term) {
+                activeCategory = 'الكل';
+                document.querySelectorAll('.cat-btn').forEach((btn, i) => {
+                    btn.classList.toggle('active', i === 0);
+                });
+            }
+            const filtered = games.filter(g => g.name.toLowerCase().includes(term));
+            renderGames(filtered);
+        }
+
+        function renderGames(data) {
+            const grid = document.getElementById('gameGrid');
+            if (!data.length) {
+                grid.innerHTML = '<div class="empty-state">😕 لا توجد ألعاب في هذا التصنيف</div>';
+                return;
+            }
+            grid.innerHTML = '';
+            data.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+
+                const img = document.createElement('img');
+                img.src = game.icon;
+                img.className = 'game-thumbnail';
+                img.alt = game.name;
+                img.loading = 'lazy';
+
+                const info = document.createElement('div');
+                info.className = 'game-info';
+
+                const nameEl = document.createElement('div');
+                nameEl.textContent = game.name;
+
+                info.appendChild(nameEl);
+
+                // badge التصنيف
+                if (game.category && activeCategory === 'الكل') {
+                    const badge = document.createElement('div');
+                    badge.className = 'cat-badge';
+                    badge.textContent = `${catIcons[game.category] || ''} ${game.category}`;
+                    info.appendChild(badge);
+                }
+
+                card.appendChild(img);
+                card.appendChild(info);
+                card.addEventListener('click', () => playGame(game.embedUrl, game.name, game.id));
+                grid.appendChild(card);
+            });
+        }
+
+        function playGame(url, title, id) {
+            currentGameId = id;
+            document.getElementById('currentGameTitle').textContent = title;
+            document.getElementById('gameFrame').src = url;
+            document.getElementById('gameOverlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // تحديث الـ URL بدون reload
+            history.pushState({gameId: id}, title, `?game=${id}`);
+        }
+
+        function closeGame() {
+            document.getElementById('gameOverlay').style.display = 'none';
+            document.getElementById('gameFrame').src = '';
+            document.body.style.overflow = 'auto';
+            currentGameId = null;
+            if (screen.orientation?.unlock) screen.orientation.unlock();
+            history.pushState({}, '', window.location.pathname);
+        }
+
+        function toggleFullScreen() {
+            const el = document.getElementById('gameFrame');
+            if (el.requestFullscreen) el.requestFullscreen();
+            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+        }
+
+        async function rotateScreen() {
+            try {
+                const overlay = document.getElementById('gameOverlay');
+                if (!document.fullscreenElement) {
+                    if (overlay.requestFullscreen) await overlay.requestFullscreen();
+                    else if (overlay.webkitRequestFullscreen) await overlay.webkitRequestFullscreen();
+                }
+                if (screen.orientation?.lock) await screen.orientation.lock('landscape');
+                else alert('يرجى تدوير الشاشة يدوياً');
+            } catch (e) { console.log(e); }
+        }
+
+        // مشاركة اللعبة
+        async function shareGame() {
+            const shareUrl = `${location.origin}${location.pathname}?game=${currentGameId}`;
+            const title = document.getElementById('currentGameTitle').textContent;
+            const shareText = `🎮 Abdo Gaming
+العب الآن: ${title}
+🔗 ${shareUrl}`;
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: `${title} - Abdo Gaming`, text: shareText, url: shareUrl });
+                } catch(e) {}
+            } else {
+                // نسخ للحافظة
+                try {
+                    await navigator.clipboard.writeText(shareText);
+                    showToast('✅ تم نسخ رابط المشاركة!');
+                } catch(e) {
+                    showToast('📋 ' + shareUrl);
+                }
+            }
+        }
+
+        // toast بسيط
+        function showToast(msg) {
+            const t = document.createElement('div');
+            t.textContent = msg;
+            t.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#00ff88;color:#000;padding:10px 20px;border-radius:20px;font-weight:bold;font-size:13px;z-index:9999;font-family:Tajawal,sans-serif;';
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 3000);
+        }
+
+        // فتح لعبة مباشرة من URL
+        function checkUrlGame() {
+            const params = new URLSearchParams(location.search);
+            const gameId = parseInt(params.get('game'));
+            if (gameId && games.length) {
+                const game = games.find(g => g.id === gameId);
+                if (game) playGame(game.embedUrl, game.name, game.id);
+            }
+        }
+
+        window.onload = async () => {
+            await loadGames();
+            checkUrlGame();
+        };
+    </script>
+
+</body>
+</html>
