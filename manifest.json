@@ -1,0 +1,22 @@
+{
+  "name": "Abdo Gaming Portal",
+  "short_name": "AbdoGaming",
+  "description": "منصة ألعاب HTML5 احترافية من عبده",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#00ff88",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/4wcfZb1X/image.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.ibb.co/4wcfZb1X/image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
