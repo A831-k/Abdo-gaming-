@@ -4,356 +4,463 @@
     "name": "Noob Village Tower Defense",
     "icon": "https://i.ibb.co/KzVkmzPH/37584078-ico.png",
     "embedUrl": "https://html5.gamedistribution.com/95cde1eb260141f8b960bb3d5dbeb34a/",
-    "category": "استراتيجية"
+    "category": "استراتيجية",
+    "device": "all"
   },
   {
     "id": 2,
     "name": "Commando Force 2",
     "icon": "https://i.ibb.co/yF7H7CrM/commando-force-2.jpg",
     "embedUrl": "https://play.gamepix.com/commando-force-2/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 3,
     "name": "City Gas Station Simulator",
     "icon": "https://i.ibb.co/0pThWmrm/city-gas-station-simulator.jpg",
     "embedUrl": "https://play.gamepix.com/city-gas-station-simulator/embed",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 4,
     "name": "DTA 6",
     "icon": "https://i.ibb.co/Q7c2mN7p/dta-6.jpg",
     "embedUrl": "https://play.gamepix.com/dta-6/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 5,
     "name": "Samurai Brawling",
     "icon": "https://i.ibb.co/YBk9f67K/samurai-brawling.jpg",
     "embedUrl": "https://play.gamepix.com/samurai-brawling/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 6,
     "name": "Strykon",
     "icon": "https://i.ibb.co/kVprqLcn/strykon.jpg",
     "embedUrl": "https://play.gamepix.com/strykon/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 7,
     "name": "ChasingHunters",
     "icon": "https://i.ibb.co/HpTjtp8t/chasinghunters.jpg",
     "embedUrl": "https://play.gamepix.com/chasinghunters/embed",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 8,
     "name": "MR RACER - Car Racing",
     "icon": "https://i.ibb.co/ZRw375fJ/mr-racer-car-racing-game.jpg",
     "embedUrl": "https://play.gamepix.com/mr-racer-car-racing-game/embed",
-    "category": "سباق"
+    "category": "سباق",
+    "device": "all"
   },
   {
     "id": 9,
     "name": "Motocross Racing",
     "icon": "https://i.ibb.co/WpndSr1M/motocross-racing.jpg",
     "embedUrl": "https://play.gamepix.com/motocross-racing/embed",
-    "category": "سباق"
+    "category": "سباق",
+    "device": "all"
   },
   {
     "id": 10,
     "name": "The Kitchen - Spot the differences",
     "icon": "https://i.ibb.co/HTrxjCY5/the-kitchen-spot-the-differences.png",
     "embedUrl": "https://play.gamepix.com/the-kitchen-spot-the-differences/embed",
-    "category": "ألغاز"
+    "category": "ألغاز",
+    "device": "all"
   },
   {
     "id": 11,
     "name": "Among Us",
     "icon": "https://i.ibb.co/WvFrvh8p/among-us.jpg",
     "embedUrl": "https://play.gamepix.com/among-us/embed",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 12,
     "name": "Cut the Rope Experiments",
     "icon": "https://i.ibb.co/HT4KWP6w/cut-the-rope-experiments.png",
     "embedUrl": "https://play.gamepix.com/cut-the-rope-experiments/embed",
-    "category": "ألغاز"
+    "category": "ألغاز",
+    "device": "all"
   },
   {
     "id": 13,
     "name": "The Man from the Window",
     "icon": "https://i.ibb.co/gZrWzM1t/the-man-from-the-window.jpg",
     "embedUrl": "https://play.gamepix.com/the-man-from-the-window/embed",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 14,
     "name": "Courageous Sniper",
     "icon": "https://i.ibb.co/F415cyrC/courageous-sniper.png",
     "embedUrl": "https://play.gamepix.com/courageous-sniper/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 15,
     "name": "Tanks 2D Battle with Ratte",
     "icon": "https://i.ibb.co/RGr1drKr/tanks-2d.png",
     "embedUrl": "https://play.gamepix.com/tanks-2d/embed",
-    "category": "استراتيجية"
+    "category": "استراتيجية",
+    "device": "all"
   },
   {
     "id": 16,
     "name": "Endless Car Chase",
     "icon": "https://i.ibb.co/DPxDs52y/endless-car-chase.jpg",
     "embedUrl": "https://play.gamepix.com/endless-car-chase/embed",
-    "category": "سباق"
+    "category": "سباق",
+    "device": "all"
   },
   {
     "id": 17,
     "name": "Zombie Catchers",
     "icon": "https://img.gamemonetize.com/u1nspb6d6k05iahz4oc3qtbl0my3cwfi/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/u1nspb6d6k05iahz4oc3qtbl0my3cwfi/",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 18,
     "name": "Football Legends 2026",
     "icon": "https://i.ibb.co/V0byB75f/13eabea86f7c4cd993a156258420e9ec-512x384.jpg",
     "embedUrl": "https://html5.gamedistribution.com/13eabea86f7c4cd993a156258420e9ec/",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 19,
     "name": "Urban Car Drift Game",
     "icon": "https://img.gamemonetize.com/98j7rm64rxbynvdvqz86sgf68359a15g/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/98j7rm64rxbynvdvqz86sgf68359a15g/",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 20,
     "name": "Dream Football Game",
     "icon": "https://img.gamemonetize.com/9kf9ege0zx40lxndzubqdvgz542eie30/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/9kf9ege0zx40lxndzubqdvgz542eie30/",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 21,
     "name": "Ultra Crash Car Simulator 2026",
     "icon": "https://img.gamemonetize.com/bevbu07wktcxyyg5hwz42yh36bg5maio/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/bevbu07wktcxyyg5hwz42yh36bg5maio/",
-    "category": "سباق"
+    "category": "سباق",
+    "device": "all"
   },
   {
     "id": 22,
     "name": "Euro Truck Drive",
     "icon": "https://img.gamemonetize.com/pmik3b315l4c6x8fwnb5ufbikygw4vwu/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/pmik3b315l4c6x8fwnb5ufbikygw4vwu/",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 23,
     "name": "Talking Tom Funny Time",
     "icon": "https://img.gamemonetize.com/3akbz67hgmul9shcxc7oqnt0gdqvt4ow/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/3akbz67hgmul9shcxc7oqnt0gdqvt4ow/",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 24,
     "name": "Ultra Kick: Goal Crazy",
     "icon": "https://img.gamemonetize.com/v7efjrd0d2jfzgp3hswbtmi1wcn46yvu/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/v7efjrd0d2jfzgp3hswbtmi1wcn46yvu/",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 25,
     "name": "NextBoot Horror Online",
     "icon": "https://img.gamemonetize.com/yr9mf562kof41vm1emecwl7ddfpth8oi/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/yr9mf562kof41vm1emecwl7ddfpth8oi/",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 26,
     "name": "Escape Your Birthday: Horror Escape",
     "icon": "https://img.gamemonetize.com/karmfagd29qbrrs3vznumevkjw1vjzlz/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/karmfagd29qbrrs3vznumevkjw1vjzlz/",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 27,
     "name": "SCARS",
     "icon": "https://img.gamemonetize.com/58y1xntwl90xz6oo8fkz86m291gamywc/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/58y1xntwl90xz6oo8fkz86m291gamywc/",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 28,
     "name": "Shawarma horror",
     "icon": "https://i.ibb.co/WWq8vD8N/fae39128b95549389ad487f668c0a74c-512x384.jpg",
     "embedUrl": "https://html5.gamedistribution.com/fae39128b95549389ad487f668c0a74c/?gd_sdk_referrer_url=https://www.example.com/games/{game-path",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 29,
     "name": "Traffic Racing",
     "icon": "https://i.ibb.co/1YvfdKyq/f3ee6674b4ea4579aeefd54d7bf388f0-512x384.jpg",
     "embedUrl": "https://html5.gamedistribution.com/f3ee6674b4ea4579aeefd54d7bf388f0/?gd_sdk_referrer_url=https://www.example.com/games/{game-path",
-    "category": "سباق"
+    "category": "سباق",
+    "device": "all"
   },
   {
     "id": 30,
     "name": "Strange Packages",
     "icon": "https://i.ibb.co/4QztcDb/strange-packages.jpg",
     "embedUrl": "https://play.gamepix.com/strange-packages/embed",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 31,
     "name": "War the Knights",
     "icon": "https://i.ibb.co/cGdphZ6/war-the-knights.jpg",
     "embedUrl": "https://play.gamepix.com/war-the-knights/embed",
-    "category": "استراتيجية"
+    "category": "استراتيجية",
+    "device": "all"
   },
   {
     "id": 32,
     "name": "Swamp Attack Online",
     "icon": "https://i.ibb.co/bjhBPDWq/37589832-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/ihnz6hc69rab7n2cfzl5x30udswdh2dz/",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 33,
     "name": "Cut the Rope 2",
     "icon": "https://i.ibb.co/8DkCML7k/37602224-ico.png",
     "embedUrl": "https://play.gamepix.com/cut-the-rope-2/embed",
-    "category": "ألغاز"
+    "category": "ألغاز",
+    "device": "all"
   },
   {
     "id": 34,
     "name": "Stickman Troll Thief Puzzle",
     "icon": "https://i.ibb.co/G4Hj56KT/37610792-ico.png",
     "embedUrl": "https://play.gamepix.com/stickman-troll-thief-puzzle/embed",
-    "category": "ألغاز"
+    "category": "ألغاز",
+    "device": "all"
   },
   {
     "id": 35,
     "name": "Offroad Cargo Truck 2024",
     "icon": "https://i.ibb.co/8L6nNgHD/37590172-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/uayd9hwxcusn9oarblbqypwsq5g520xk/",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 36,
     "name": "OBUNGA The Game",
     "icon": "https://i.ibb.co/zHGMPwpQ/37617116-ico.png",
     "embedUrl": "https://play.gamepix.com/obunga-the-game/embed",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 37,
     "name": "Supermarket Simulator Dream Store",
     "icon": "https://i.ibb.co/vCw0hFVt/37610600-ico.png",
     "embedUrl": "https://play.gamepix.com/-simulator-dream-store/embed",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 38,
     "name": "Super HitMasters",
     "icon": "https://i.ibb.co/CKrfH9mF/37588375-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/dbw075jc1l806ljs2z1tb69gl1rtb3up/",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 39,
     "name": "Siren Head Nightmare Scary Survival",
     "icon": "https://i.ibb.co/cc92vF9w/37610828-ico.png",
     "embedUrl": "https://play.gamepix.com/siren-head-scary/embed",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 40,
     "name": "Commando Force 2",
     "icon": "https://i.ibb.co/BHFZtGkd/37611156-ico.png",
     "embedUrl": "https://play.gamepix.com/commando-force-2/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 41,
     "name": "Penalty Challenge",
     "icon": "https://i.ibb.co/MyHDQJJN/37610860-ico.png",
     "embedUrl": "https://play.gamepix.com/penalty-challenge/embed",
-    "category": "رياضة"
+    "category": "رياضة",
+    "device": "all"
   },
   {
     "id": 42,
     "name": "Hit Master",
     "icon": "https://i.ibb.co/CKf3G82N/37617213-ico.png",
     "embedUrl": "https://play.gamepix.com/hit-master/embed",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 43,
     "name": "Where is my Water",
     "icon": "https://i.ibb.co/992KRnxG/37650209-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/1g5cp5vlxs5vbbvfj5965fd119k19fqv/",
-    "category": "ألغاز"
+    "category": "ألغاز",
+    "device": "all"
   },
   {
     "id": 44,
     "name": "Dig out of Prison",
     "icon": "https://i.ibb.co/ycnxDRG1/37651093-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/gokfzd6xa26p028449iszvq569msr1ko/",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 45,
     "name": "Wild Hunting Clash",
     "icon": "https://i.ibb.co/cX2yhxSk/37651202-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/wd7cq3e3clalkrf48pize43ad29glody/",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 46,
     "name": "Escape Waves for Lucky Blocks",
     "icon": "https://i.ibb.co/6cVJbKXC/37651285-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/nt4z6dxc6a638of21w30tord84su14se/",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 47,
     "name": "Getting Over It Unblocke",
     "icon": "https://i.ibb.co/ccW7dZnD/37651366-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/99gjodm9l46o7lbkuf26qhc54pxyzp1o/",
-    "category": "مغامرة"
+    "category": "مغامرة",
+    "device": "all"
   },
   {
     "id": 48,
     "name": "Squad Shooter Simulation Shootout",
     "icon": "https://i.ibb.co/rK1kXVmY/37651464-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/pbqkkhkop6rk9lihboh8j4zt3zsitvy7/",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
   },
   {
     "id": 49,
     "name": "Grand Hotel Mania",
     "icon": "https://i.ibb.co/rKNB6BKs/37716983-ico.png",
     "embedUrl": "https://html5.gamemonetize.co/hgrj3m9wd61mmd3a0nr0ftn3l7zn0q12/",
-    "category": "محاكاة"
+    "category": "محاكاة",
+    "device": "all"
   },
   {
     "id": 50,
     "name": "Slendrina Must Die: The Asylum",
     "icon": "https://img.gamemonetize.com/3c8kwxl3kmav9k5ac06nei520fsgq3gu/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/3c8kwxl3kmav9k5ac06nei520fsgq3gu/",
-    "category": "رعب"
+    "category": "رعب",
+    "device": "all"
   },
   {
     "id": 51,
     "name": "KillMaster Secret Agent",
     "icon": "https://img.gamemonetize.com/f471e4j1zv654kbamb500101omqd11hf/512x384.jpg",
     "embedUrl": "https://html5.gamemonetize.co/f471e4j1zv654kbamb500101omqd11hf/",
-    "category": "أكشن"
+    "category": "أكشن",
+    "device": "all"
+  },
+  {
+    "id": 52,
+    "name": "Bus Driver Simulator 3D",
+    "icon": "https://i.ibb.co/7tJcxMsM/bus-driver-simulator-3d.jpg",
+    "embedUrl": "https://play.gamepix.com/bus-driver-simulator-3d/embed",
+    "category": "محاكاة",
+    "device": "all"
+  },
+  {
+    "id": 53,
+    "name": "Highway Traffic",
+    "icon": "https://i.ibb.co/35HxhKGS/Highway-Traffic-2-lg.jpg",
+    "embedUrl": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
+    "category": "سباق",
+    "device": "desktop"
+  },
+  {
+    "id": 54,
+    "name": "Crazy Drifter",
+    "icon": "https://i.ibb.co/S4FL3T0q/Crazy-Drifter-lg.jpg",
+    "embedUrl": "https://www.onlinegames.io/games/2022/unity3/crazy-drifter/index.html",
+    "category": "محاكاة",
+    "device": "desktop"
+  },
+  {
+    "id": 55,
+    "name": "Stickman GTA City",
+    "icon": "https://i.ibb.co/6JVZqHZc/stickman-gta-city-free-lg.jpg",
+    "embedUrl": "https://cloud.onlinegames.io/games/2024/unity3/stickman-gta-city/index-og.html",
+    "category": "أكشن",
+    "device": "desktop"
+  },
+  {
+    "id": 56,
+    "name": "Masked Special Forces",
+    "icon": "https://i.ibb.co/KjC3YcRL/Masked-Special-Forces-FPS-lg.jpg",
+    "embedUrl": "https://www.onlinegames.io/games/2022/unity2/masked-special-forces/index.html",
+    "category": "أكشن",
+    "device": "desktop"
+  },
+  {
+    "id": 57,
+    "name": "Hero Dragon Power",
+    "icon": "https://i.ibb.co/LzyCxcjz/Hero-Dragon-Power-Game-lg.jpg",
+    "embedUrl": "https://www.onlinegames.io/games/2023/unity/hero-dragon-power/index.html",
+    "category": "أكشن",
+    "device": "desktop"
+  },
+  {
+    "id": 58,
+    "name": "Jack's Village",
+    "icon": "https://i.ibb.co/rKczv42N/Jacks-Village-lg.jpg",
+    "embedUrl": "https://www.onlinegames.io/games/2021/unity/jacks-village/index.html",
+    "category": "مغامرة",
+    "device": "desktop"
   }
-]
+    ]
