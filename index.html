@@ -91,7 +91,7 @@
 
         /* Grid */
         .game-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 4px 10px 80px; overflow-y: auto; }
-        .game-grid-wrap { height: calc(100vh - 148px); overflow-y: auto; }
+        .game-grid-wrap { height: calc(100vh - 210px); overflow-y: auto; }
 
         /* Card */
         .game-card { background: #111; border-radius: 12px; overflow: hidden; border: 1px solid #1e1e1e; cursor: pointer; transition: transform 0.15s, border-color 0.15s; display: flex; flex-direction: column; }
@@ -105,6 +105,21 @@
         /* Skeleton */
         .skeleton { background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 12px; aspect-ratio: 1; }
         @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        .fav-btn { position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,0.6); border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; transition: 0.2s; }
+        .fav-btn.active { background: rgba(255,50,50,0.8); }
+        .device-badge { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.7); border-radius: 8px; padding: 2px 5px; font-size: 9px; color: #aaa; z-index: 5; }
+        .device-badge.desktop { color: #60a5fa; }
+        .device-tabs { display: flex; gap: 6px; padding: 0 14px 8px; }
+        .device-btn { flex-shrink: 0; padding: 4px 12px; border-radius: 20px; border: 1px solid #333; background: #111; color: #666; font-size: 11px; font-family: "Tajawal", sans-serif; font-weight: 700; cursor: pointer; transition: 0.2s; }
+        .device-btn.active { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+        .game-card { position: relative; }
+        .recently-section { padding: 8px 14px 4px; }
+        .recently-title { font-size: 12px; color: #555; margin-bottom: 6px; font-weight: 700; }
+        .recently-scroll { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+        .recently-scroll::-webkit-scrollbar { display: none; }
+        .recently-item { flex-shrink: 0; width: 50px; text-align: center; cursor: pointer; }
+        .recently-item img { width: 50px; height: 50px; border-radius: 10px; object-fit: cover; border: 1px solid #222; }
+        .recently-item span { font-size: 8px; color: #555; display: block; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
         /* Empty state */
         .empty-state { grid-column: 1/-1; text-align: center; padding: 40px 20px; color: #444; }
@@ -134,6 +149,19 @@
     <!-- Category Tabs -->
     <div class="cat-scroll" id="catTabs">
         <button class="cat-btn active" onclick="filterByCategory('الكل')">🎮 الكل</button>
+    </div>
+
+    <!-- فلتر الجهاز -->
+    <div class="device-tabs">
+        <button class="device-btn active" onclick="filterDevice('all', this)">🌐 الكل</button>
+        <button class="device-btn" onclick="filterDevice('mobile', this)">📱 موبايل</button>
+        <button class="device-btn" onclick="filterDevice('desktop', this)">🖥️ كمبيوتر</button>
+    </div>
+
+    <!-- آخر الألعاب المُلعَبة -->
+    <div class="recently-section" id="recentlySection" style="display:none;">
+        <div class="recently-title">🕐 لعبت مؤخراً</div>
+        <div class="recently-scroll" id="recentlyScroll"></div>
     </div>
 
     <!-- Game Grid -->
@@ -176,6 +204,9 @@
         let games = [];
         let activeCategory = 'الكل';
         let currentGameId = null;
+        let activeDevice = 'all';
+        let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        let recentlyPlayed = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
 
         // تعريف أيقونات التصنيفات
         const catIcons = {
@@ -216,6 +247,15 @@
                 btn.textContent = `${icon} ${cat} (${count})`;
                 btn.addEventListener('click', () => filterByCategory(cat));
                 tabsEl.appendChild(btn);
+                // زر المفضلة بعد الكل مباشرة
+                if (cat === 'الكل') {
+                    const favBtn = document.createElement('button');
+                    favBtn.className = 'cat-btn';
+                    favBtn.id = 'favCatBtn';
+                    favBtn.textContent = `❤️ المفضلة (${favorites.length})`;
+                    favBtn.addEventListener('click', () => filterByFavorites(favBtn));
+                    tabsEl.appendChild(favBtn);
+                }
             });
         }
 
@@ -240,8 +280,7 @@
                     btn.classList.toggle('active', i === 0);
                 });
             }
-            const filtered = games.filter(g => g.name.toLowerCase().includes(term));
-            renderGames(filtered);
+            applyFilters();
         }
 
         function renderGames(data) {
@@ -279,6 +318,24 @@
 
                 card.appendChild(img);
                 card.appendChild(info);
+                // زر المفضلة
+                const favBtn = document.createElement('button');
+                favBtn.className = 'fav-btn' + (favorites.includes(game.id) ? ' active' : '');
+                favBtn.textContent = favorites.includes(game.id) ? '❤️' : '🤍';
+                favBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleFavorite(game.id, favBtn);
+                });
+                card.appendChild(favBtn);
+
+                // بادج الجهاز
+                if (game.device === 'desktop') {
+                    const badge = document.createElement('div');
+                    badge.className = 'device-badge desktop';
+                    badge.textContent = '🖥️ PC';
+                    card.appendChild(badge);
+                }
+
                 card.addEventListener('click', () => playGame(game.embedUrl, game.name, game.id));
                 grid.appendChild(card);
             });
@@ -292,6 +349,8 @@
             document.body.style.overflow = 'hidden';
             // تحديث الـ URL بدون reload
             history.pushState({gameId: id}, title, `?game=${id}`);
+            const gameObj = games.find(g => g.id === id);
+            if (gameObj) addToRecently(gameObj);
         }
 
         function closeGame() {
@@ -363,8 +422,94 @@
             }
         }
 
+        // فلتر المفضلة
+        function filterByFavorites(btn) {
+            activeCategory = '❤️';
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('searchInput').value = '';
+            const favGames = games.filter(g => favorites.includes(g.id));
+            if (!favGames.length) {
+                document.getElementById('gameGrid').innerHTML = '<div class="empty-state">💔 لم تضف أي لعبة للمفضلة بعد<br><small>اضغط ❤️ على أي لعبة لإضافتها</small></div>';
+            } else {
+                renderGames(favGames);
+            }
+        }
+
+        // فلتر الجهاز
+        function filterDevice(device, btn) {
+            activeDevice = device;
+            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilters();
+        }
+
+        // تطبيق كل الفلاتر
+        function applyFilters() {
+            let filtered = games;
+            if (activeCategory !== 'الكل') filtered = filtered.filter(g => g.category === activeCategory);
+            if (activeDevice === 'mobile') filtered = filtered.filter(g => g.device === 'all');
+            if (activeDevice === 'desktop') filtered = filtered.filter(g => g.device === 'desktop' || g.device === 'all');
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            if (term) filtered = filtered.filter(g => g.name.toLowerCase().includes(term));
+            // مفضلة في القمة لو تصنيف الكل
+            if (activeCategory === 'الكل' && !term) {
+                const favGames = filtered.filter(g => favorites.includes(g.id));
+                const rest = filtered.filter(g => !favorites.includes(g.id));
+                filtered = [...favGames, ...rest];
+            }
+            renderGames(filtered);
+        }
+
+        // تبديل المفضلة
+        function toggleFavorite(id, btn) {
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(f => f !== id);
+                btn.textContent = '🤍';
+                btn.classList.remove('active');
+            } else {
+                favorites.push(id);
+                btn.textContent = '❤️';
+                btn.classList.add('active');
+            }
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            const favBtn2 = document.getElementById('favCatBtn');
+            if (favBtn2) favBtn2.textContent = `❤️ المفضلة (${favorites.length})`;
+        }
+
+        // آخر الألعاب
+        function addToRecently(game) {
+            recentlyPlayed = recentlyPlayed.filter(r => r.id !== game.id);
+            recentlyPlayed.unshift({id: game.id, name: game.name, icon: game.icon});
+            if (recentlyPlayed.length > 10) recentlyPlayed.pop();
+            localStorage.setItem('recentlyPlayed', JSON.stringify(recentlyPlayed));
+            renderRecently();
+        }
+
+        function renderRecently() {
+            if (!recentlyPlayed.length) return;
+            document.getElementById('recentlySection').style.display = 'block';
+            const scroll = document.getElementById('recentlyScroll');
+            scroll.innerHTML = '';
+            recentlyPlayed.forEach(r => {
+                const item = document.createElement('div');
+                item.className = 'recently-item';
+                const img = document.createElement('img');
+                img.src = r.icon;
+                img.alt = r.name;
+                const span = document.createElement('span');
+                span.textContent = r.name;
+                item.appendChild(img);
+                item.appendChild(span);
+                const game = games.find(g => g.id === r.id);
+                if (game) item.addEventListener('click', () => playGame(game.embedUrl, game.name, game.id));
+                scroll.appendChild(item);
+            });
+        }
+
         window.onload = async () => {
             await loadGames();
+            renderRecently();
             checkUrlGame();
         };
     </script>
